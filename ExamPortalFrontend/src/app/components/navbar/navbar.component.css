@@ -1,0 +1,27 @@
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.navbar-button{
+    background-color: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+.navbar-button :hover{
+    color: black;
+
+}
+
+.navbar-button :active{
+    scale: .9;
+}
+
+.logo-navbar{
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 150%;
+    font-weight: bold;
+}
