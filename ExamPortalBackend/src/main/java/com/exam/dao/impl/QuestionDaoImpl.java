@@ -42,9 +42,17 @@ public class QuestionDaoImpl implements QuestionDao {
 	}
 
 	@Override
-	public Set<Question> getQuestionsOfQuiz(Quiz quiz) {
+	public Set<Question> getAllQuestionsOfQuiz(Quiz quiz) {
 		// TODO Auto-generated method stub
 		return this.questionRepository.findByQuiz(quiz);
 	}
+
+	@Override
+	public void deleteQuestion(Long questionId) {
+		// TODO Auto-generated method stub
+		this.questionRepository.deleteById(questionId);
+	}
+	
+	
 
 }

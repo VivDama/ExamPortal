@@ -43,7 +43,7 @@ public class QuizDaoImpl implements QuizDao {
 	@Override
 	public void deleteQuiz(Long quizId) {
 		// TODO Auto-generated method stub
-		this.quizRepository.deleteById(quizId);
+		this.quizRepository.deleteQuizById(quizId);
 	}
 
 }

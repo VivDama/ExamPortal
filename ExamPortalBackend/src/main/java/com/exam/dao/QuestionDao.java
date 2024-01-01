@@ -15,6 +15,8 @@ public interface QuestionDao {
 
 	public Question getQuestion(long questionId);
 
-	public Set<Question> getQuestionsOfQuiz(Quiz quiz);
+	public Set<Question> getAllQuestionsOfQuiz(Quiz quiz);
+	
+	public void deleteQuestion(Long questionId);
 
 }

@@ -21,7 +21,7 @@ public class Category {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name="category_id")
-	private Long cid;
+	private Long cId;
 	
 	@Column(name="category_name")
 	private String title;
@@ -29,7 +29,7 @@ public class Category {
 	@Column(name="category_description",length = 1000)
 	private String description;
 	
-	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, mappedBy = "category")
+	@OneToMany(cascade = CascadeType.ALL,fetch = FetchType.EAGER, mappedBy = "category")
 	@JsonIgnore
 	private Set<Quiz> quizzes  = new LinkedHashSet<>();
 	
@@ -45,12 +45,12 @@ public class Category {
 		this.description = description;
 	}
 
-	public Long getCid() {
-		return cid;
+	public Long getCId() {
+		return cId;
 	}
 
-	public void setCid(Long cid) {
-		this.cid = cid;
+	public void setCId(Long cId) {
+		this.cId = cId;
 	}
 
 	public String getTitle() {
@@ -67,6 +67,14 @@ public class Category {
 
 	public void setDescription(String description) {
 		this.description = description;
+	}
+
+	public Set<Quiz> getQuizzes() {
+		return quizzes;
+	}
+
+	public void setQuizzes(Set<Quiz> quizzes) {
+		this.quizzes = quizzes;
 	}
 	
 	

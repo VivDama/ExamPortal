@@ -46,7 +46,7 @@ public class Quiz {
 	private Category category;
 	
 	
-	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "quiz")
+	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY,mappedBy = "quiz")
 	@JsonIgnore
 	private Set<Question> questions = new HashSet<>();
 
@@ -111,6 +111,20 @@ public class Quiz {
 	public void setActive(boolean isActive) {
 		this.isActive = isActive;
 	}
-	
 
+	public Category getCategory() {
+		return category;
+	}
+
+	public void setCategory(Category category) {
+		this.category = category;
+	}
+
+	public Set<Question> getQuestions() {
+		return questions;
+	}
+
+	public void setQuestions(Set<Question> questions) {
+		this.questions = questions;
+	}
 }
