@@ -50,7 +50,7 @@ public class QuestionDaoImpl implements QuestionDao {
 	@Override
 	public void deleteQuestion(Long questionId) {
 		// TODO Auto-generated method stub
-		this.questionRepository.deleteById(questionId);
+		this.questionRepository.deleteQuestionById(questionId);
 	}
 	
 	

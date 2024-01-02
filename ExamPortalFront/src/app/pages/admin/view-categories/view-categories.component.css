@@ -1,0 +1,16 @@
+mat-divider{
+    width: 100%;
+ 
+}
+
+.border-b{
+    border-bottom: 2px thin gray;
+}
+
+
+
+.category-list-item{
+    display: block;
+    height: fit-content;
+    margin: 5px;
+}

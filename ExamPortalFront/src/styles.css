@@ -1,0 +1,50 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
+background: #E3F2FD !important; }
+
+
+.text-center{
+    text-align: center !important;
+}
+.item-center{
+    align-items: center;
+}
+
+.mb-5{
+    margin-bottom: 5px;
+}
+
+.mb-10{
+    margin-bottom: 10px;
+}
+
+.ml-20{
+    margin-left: 20px;
+}
+.mr-20{
+    margin-right: 20px;
+}
+.mb-20{
+    margin-bottom: 20px;
+}
+
+.mt-30{
+    margin-top: 30px;
+}
+
+.mr-30{
+    margin-right: 30px;
+}
+
+.mat-icon-height-20{
+    height: 20px !important;
+    width: 20px;
+}
+
+.aligned-with-icon-relative{
+    position: relative;
+    top: -5px;
+    margin-left: 15px; /* optional */
+}

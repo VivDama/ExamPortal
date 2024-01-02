@@ -1,0 +1,27 @@
+<mat-card style="height: fit-content;">
+    <mat-action-list>
+        <div mat-subheader>Menu</div>
+        <button mat-list-item   [routerLink]="'/admin'">
+            <mat-icon mat-list-icon>home</mat-icon><span class="aligned-with-icon-relative"> Home</span>
+        </button>
+
+        <button mat-list-item routerLink="/admin/profile">
+            <mat-icon mat-list-icon>account_circle</mat-icon><span class="aligned-with-icon-relative"> Profile</span>
+        </button>
+        <button mat-list-item routerLink="/admin/categories">
+            <mat-icon mat-list-icon>add_shopping_cart</mat-icon><span class="aligned-with-icon-relative">Categories</span> 
+        </button>
+        <button mat-list-item routerLink="/admin/add-category">
+            <mat-icon mat-list-icon>add_circle-outline</mat-icon><span class="aligned-with-icon-relative">Add Category</span> 
+        </button>
+        <button mat-list-item routerLink="/admin/profile">
+            <mat-icon mat-list-icon>quiz</mat-icon><span class="aligned-with-icon-relative">Quiz</span> 
+        </button>
+        <button mat-list-item routerLink="/admin/profile">
+            <mat-icon mat-list-icon>add</mat-icon><span class="aligned-with-icon-relative"> Add Quiz</span>
+        </button>
+        <button mat-list-item routerLink="/admin/profile">
+            <mat-icon mat-list-icon>logout</mat-icon><span class="aligned-with-icon-relative">Logout</span>
+        </button>
+    </mat-action-list>
+</mat-card>

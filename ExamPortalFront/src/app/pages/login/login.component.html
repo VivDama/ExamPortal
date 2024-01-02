@@ -1,0 +1,30 @@
+<div class="bootstrap-wrapper">
+    <div class="container">
+        <div class="row mt-30">
+            <div class="col-md-6 offset-md-3">
+                <mat-card class="container">
+                    <div class="container text-center">
+                        <img class="logo-signup" src="../../../assets/SignUpLogo.png" alt="">
+                    </div>
+                    <h1 class="text-center">Login To Get Started</h1>
+                    <form (ngSubmit)="formSubmit()">
+                        <!-- Username field -->
+                        <mat-form-field class="full-width" appearance="fill">
+                            <mat-label>User Name</mat-label>
+                            <input required [(ngModel)]="loginData.username" name="username" matInput placeholder="Enter your Username">
+                            <!-- <mat-hint>User name already taken, Please try another</mat-hint> -->
+                        </mat-form-field>
+                        <!-- Password field -->
+                        <mat-form-field class="full-width" appearance="fill">
+                            <mat-label>Password</mat-label>
+                            <input required [(ngModel)]="loginData.password" name="password" matInput type="password" placeholder="Enter your Password">
+                        </mat-form-field>
+                        <div class="container">
+                            <button class="mb-20" mat-raised-button color="primary" type="submit">Login</button>
+                        </div>
+                    </form>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>
