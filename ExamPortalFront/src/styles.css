@@ -20,6 +20,10 @@ background: #E3F2FD !important; }
     margin-bottom: 10px;
 }
 
+.ml-10{
+    margin-left: 10px;
+}
+
 .ml-20{
     margin-left: 20px;
 }
@@ -29,6 +33,13 @@ background: #E3F2FD !important; }
 .mb-20{
     margin-bottom: 20px;
 }
+.mt-10{
+    margin-top: 10px;
+}
+
+.mt-20{
+    margin-top: 20px;
+}
 
 .mt-30{
     margin-top: 30px;
@@ -36,6 +47,10 @@ background: #E3F2FD !important; }
 
 .mr-30{
     margin-right: 30px;
+}
+
+.ml-30{
+    margin-left: 30px;
 }
 
 .mat-icon-height-20{
@@ -47,4 +62,8 @@ background: #E3F2FD !important; }
     position: relative;
     top: -5px;
     margin-left: 15px; /* optional */
+}
+
+.ml-auto{
+    margin-left: auto;
 }

@@ -65,7 +65,7 @@ public class QuestionServiceimpl implements QuestionService{
 	}
 
 	@Override
-	public Set<Question> getQuestionsOfQuiz(Long quizId) {
+	public Set<Question> getQuestionsForQuiz(Long quizId) {
 		// TODO Auto-generated method stub
 		Quiz quiz = this.quizDao.getQuiz(quizId);
 		long questionCount = quiz.getQuestionCount();

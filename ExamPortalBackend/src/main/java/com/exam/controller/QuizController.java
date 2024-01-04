@@ -26,6 +26,7 @@ public class QuizController {
 	//add quiz
 	@PostMapping("/")
 	public ResponseEntity<Quiz> add (@RequestBody Quiz quiz){
+		System.out.println("New quiz status: "+quiz.getIsActive());
 		return ResponseEntity.ok(this.quizService.addQuiz(quiz));
 	}
 	

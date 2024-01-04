@@ -57,9 +57,9 @@ public class QuestionController {
 	}
 
 	// get random questions of a quiz
-	@GetMapping("quiz/{qId}")
+	@GetMapping("quiz-attempt/{qId}")
 	public ResponseEntity<?> getQuestionsOfQuiz(@PathVariable("qId") Long qId) {
-		return ResponseEntity.ok(this.questionService.getQuestionsOfQuiz(qId));
+		return ResponseEntity.ok(this.questionService.getQuestionsForQuiz(qId));
 	}
 
 	// delete quiz

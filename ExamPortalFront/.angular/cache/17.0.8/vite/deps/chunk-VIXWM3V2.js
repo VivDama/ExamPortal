@@ -1314,6 +1314,17 @@ var ListKeyManager = class {
     return this._items instanceof QueryList ? this._items.toArray() : this._items;
   }
 };
+var ActiveDescendantKeyManager = class extends ListKeyManager {
+  setActiveItem(index) {
+    if (this.activeItem) {
+      this.activeItem.setInactiveStyles();
+    }
+    super.setActiveItem(index);
+    if (this.activeItem) {
+      this.activeItem.setActiveStyles();
+    }
+  }
+};
 var FocusKeyManager = class extends ListKeyManager {
   constructor() {
     super(...arguments);
@@ -4986,6 +4997,11 @@ var MatRippleLoader = _MatRippleLoader;
 })();
 
 export {
+  coerceBooleanProperty,
+  coerceNumberProperty,
+  coerceArray,
+  coerceCssPixelValue,
+  coerceElement,
   Platform,
   getSupportedInputTypes,
   normalizePassiveListenerOptions,
@@ -4994,25 +5010,27 @@ export {
   _getFocusedElementPierceShadowDom,
   _getEventTarget,
   _isTestEnvironment,
+  Directionality,
+  BidiModule,
   ENTER,
   ESCAPE,
   SPACE,
+  LEFT_ARROW,
+  UP_ARROW,
+  RIGHT_ARROW,
+  DOWN_ARROW,
   A,
   hasModifierKey,
-  coerceBooleanProperty,
-  coerceNumberProperty,
-  coerceArray,
-  coerceCssPixelValue,
-  coerceElement,
   CdkObserveContent,
   ObserversModule,
   BreakpointObserver,
   Breakpoints,
+  addAriaReferencedId,
+  removeAriaReferencedId,
+  ActiveDescendantKeyManager,
   FocusKeyManager,
   LiveAnnouncer,
   FocusMonitor,
-  Directionality,
-  BidiModule,
   VERSION2 as VERSION,
   AnimationCurves,
   AnimationDurations,
@@ -5055,4 +5073,4 @@ export {
   MatOptionModule,
   MatRippleLoader
 };
-//# sourceMappingURL=chunk-GFAZBCNN.js.map
+//# sourceMappingURL=chunk-VIXWM3V2.js.map

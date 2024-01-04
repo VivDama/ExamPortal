@@ -11,6 +11,11 @@ import { ProfileComponent } from './pages/profile/profile.component';
 import { WelcomeComponent } from './pages/admin/welcome/welcome.component';
 import { ViewCategoriesComponent } from './pages/admin/view-categories/view-categories.component';
 import { AddCategoryComponent } from './pages/admin/add-category/add-category.component';
+import { ViewQuizzesComponent } from './pages/admin/view-quizzes/view-quizzes.component';
+import { AddQuizComponent } from './pages/admin/add-quiz/add-quiz.component';
+import { UpdateQuizComponent } from './pages/admin/update-quiz/update-quiz.component';
+import { ViewQuizQuestionsComponent } from './pages/admin/view-quiz-questions/view-quiz-questions.component';
+import { AddQuestionComponent } from './pages/admin/add-question/add-question.component';
 
 export const routes: Routes = [
     {
@@ -22,36 +27,56 @@ export const routes: Routes = [
         path: 'login',
         component: LoginComponent,
         pathMatch: 'full',
-        canActivate:[loginGuard]
+        canActivate: [loginGuard]
     },
     {
         path: '',
         component: HomeComponent,
         pathMatch: 'full'
     },
-    
+
     {
         path: 'admin',
         component: DashboardComponent,
-        canActivate:[adminGuard],
-        children:[
+        canActivate: [adminGuard],
+        children: [
             {
                 path: '',
-                component:WelcomeComponent
+                component: WelcomeComponent
             },
             {
-                path:'profile',
+                path: 'profile',
                 component: ProfileComponent,
             },
             {
-                path:'categories',
-                component:ViewCategoriesComponent,
+                path: 'categories',
+                component: ViewCategoriesComponent,
             },
             {
-                path:'add-category',
-                component:AddCategoryComponent
+                path: 'add-category',
+                component: AddCategoryComponent
             },
-            
+            {
+                path: 'quizzes',
+                component: ViewQuizzesComponent
+            },
+            {
+                path: 'add-quiz',
+                component: AddQuizComponent
+            },
+            {
+                path: 'quiz-update/:qid',
+                component: UpdateQuizComponent
+            },
+            {
+                path: 'view-questions/:qid/:title',
+                component: ViewQuizQuestionsComponent
+            },
+            {
+                path: "add-question/:qid/:qtitle",
+                component: AddQuestionComponent
+            },
+
         ]
 
     },
@@ -59,7 +84,7 @@ export const routes: Routes = [
         path: 'user-dashboard',
         component: UserDashboardComponent,
         pathMatch: 'full',
-        canActivate:[normalGuard]
+        canActivate: [normalGuard]
     },
 
 ];

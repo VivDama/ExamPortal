@@ -4,6 +4,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
@@ -104,11 +105,13 @@ public class Quiz {
 		this.questionCount = questionCount;
 	}
 
-	public boolean isActive() {
+	@JsonProperty("isActive")
+	public boolean getIsActive() {
 		return isActive;
 	}
 
-	public void setActive(boolean isActive) {
+	@JsonProperty("isActive")
+	public void setIsActive(boolean isActive) {
 		this.isActive = isActive;
 	}
 

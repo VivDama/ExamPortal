@@ -70,6 +70,20 @@ function transition(stateChangeExpr, steps, options = null) {
     options
   };
 }
+function animateChild(options = null) {
+  return {
+    type: 9,
+    options
+  };
+}
+function query(selector, animation, options = null) {
+  return {
+    type: 11,
+    selector,
+    animation,
+    options
+  };
+}
 var _AnimationBuilder = class _AnimationBuilder {
 };
 _AnimationBuilder.ɵfac = function AnimationBuilder_Factory(t) {
@@ -4590,6 +4604,8 @@ export {
   style,
   state,
   transition,
+  animateChild,
+  query,
   InjectableAnimationEngine,
   BrowserAnimationsModule,
   provideAnimations,
@@ -4619,4 +4635,4 @@ export {
    * License: MIT
    *)
 */
-//# sourceMappingURL=chunk-OFKV3CHQ.js.map
+//# sourceMappingURL=chunk-CESG22F6.js.map

@@ -29,7 +29,7 @@ public class Category {
 	@Column(name="category_description",length = 1000)
 	private String description;
 	
-	@OneToMany(cascade = CascadeType.ALL,fetch = FetchType.EAGER, mappedBy = "category")
+	@OneToMany(cascade = CascadeType.ALL,fetch = FetchType.LAZY, mappedBy = "category")
 	@JsonIgnore
 	private Set<Quiz> quizzes  = new LinkedHashSet<>();
 	

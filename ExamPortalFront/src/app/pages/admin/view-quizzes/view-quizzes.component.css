@@ -1,0 +1,8 @@
+.quiz-header-image {
+    background-image: url('../../../../assets/quiz-logo.png');
+    background-size: cover;
+}
+
+.quiz-button-take{
+    display: flex;
+}
