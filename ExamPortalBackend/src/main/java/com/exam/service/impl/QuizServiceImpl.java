@@ -45,4 +45,22 @@ public class QuizServiceImpl implements QuizService {
 		this.quizDao.deleteQuiz(quizId);
 	}
 
+	@Override
+	public Set<Quiz> getQuizzesOfCategory(Long cId) {
+		// TODO Auto-generated method stub
+		return this.quizDao.getQuizzesOfCategory(cId);
+	}
+
+	@Override
+	public Set<Quiz> getActiveQuizzesOfCategory(Long cId) {
+		// TODO Auto-generated method stub
+		return this.quizDao.getActiveQuizzesOfCategory(cId);
+	}
+
+	@Override
+	public Set<Quiz> getAllActiveQuizzes() {
+		// TODO Auto-generated method stub
+		return this.quizDao.getAllActiveQuizzes();
+	}
+
 }

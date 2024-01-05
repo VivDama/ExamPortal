@@ -69,7 +69,7 @@ export class LoginComponent {
             }
             else if(this.login.getUserRole() == "NORMAL"){
               //display user dashboard
-              window.location.href="/user-dashboard";
+              window.location.href="/user-dashboard/0";
               // this.router.navigate(['user-dashboard']);
               // this.login.loginStatusSubject.next(true);              
             }

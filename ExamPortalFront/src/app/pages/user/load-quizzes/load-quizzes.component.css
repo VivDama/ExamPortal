@@ -1,0 +1,16 @@
+.truncate{
+    display: block;
+    white-space: nowrap;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.header-image {
+    background-image: url('../../../../assets/quiz-logo-2.png');
+    background-size: cover;
+  }
+.f-right{
+    margin-left: auto; 
+    display: flex;
+}

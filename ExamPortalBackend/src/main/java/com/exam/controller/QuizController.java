@@ -42,6 +42,12 @@ public class QuizController {
 		return ResponseEntity.ok(this.quizService.getQuizzes());
 	}
 	
+	//get active quizzes
+	@GetMapping("/active")
+	public ResponseEntity<?> activeQuizzes(){
+		return ResponseEntity.ok(this.quizService.getAllActiveQuizzes());
+	}
+	
 	//get single quiz
 	@GetMapping("/{qId}")
 	public Quiz quiz(@PathVariable("qId") Long qId) {
@@ -52,5 +58,15 @@ public class QuizController {
 	@DeleteMapping("/{qId}")
 	public void delete(@PathVariable("qId") Long qId) {
 		this.quizService.deleteQuiz(qId);
+	}
+	
+	@GetMapping("/category/{cid}")
+	public ResponseEntity<?> getQuizzesOfCategory(@PathVariable("cid") Long cId){
+		return ResponseEntity.ok(this.quizService.getQuizzesOfCategory(cId));
+	}
+	
+	@GetMapping("/category-active/{cid}")
+	public ResponseEntity<?> getActiveQuizzesOfCategory(@PathVariable("cid") Long cId){
+		return ResponseEntity.ok(this.quizService.getActiveQuizzesOfCategory(cId));
 	}
 }

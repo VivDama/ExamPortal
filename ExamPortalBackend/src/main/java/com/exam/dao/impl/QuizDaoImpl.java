@@ -46,4 +46,22 @@ public class QuizDaoImpl implements QuizDao {
 		this.quizRepository.deleteQuizById(quizId);
 	}
 
+	@Override
+	public Set<Quiz> getQuizzesOfCategory(Long cId) {
+		// TODO Auto-generated method stub
+		return this.quizRepository.findByCategoryId(cId);
+	}
+
+	@Override
+	public Set<Quiz> getActiveQuizzesOfCategory(Long cId) {
+		// TODO Auto-generated method stub
+		return this.quizRepository.findByCategoryIdAndActive(cId);
+	}
+
+	@Override
+	public Set<Quiz> getAllActiveQuizzes() {
+		// TODO Auto-generated method stub
+		return this.quizRepository.getAllActiveQuizzes();
+	}
+
 }

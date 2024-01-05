@@ -1,5 +1,4 @@
 <div class="bootstrap-wrapper">
-    {{question | json}}
     <div class="row mt-20">
         <div class="col-md-12">
             <h1>Add question to {{qTitle}}</h1>
@@ -11,11 +10,12 @@
                 </mat-card-header>
                 <mat-card-content>
                     <form class="mt-20" (ngSubmit)="addQuestion()">
-                        <mat-form-field class="w-100">
+                        <!-- <mat-form-field class="w-100">
                             <mat-label>Enter Question Body</mat-label>
                             <textarea required name="content" [(ngModel)]="question.content" rows="3" matInput placeholder="Question...."></textarea>
-                        </mat-form-field>
-                        <div class="row">
+                        </mat-form-field> -->
+                        <ckeditor [editor]="editor" aria-placeholder="Enter the question here" name="content" [(ngModel)]="question.content"></ckeditor>
+                        <div class="row mt-20">
                             <div class="col-md-6">
                                 <!-- option1 -->
                                 <mat-form-field appearance="outline" class="w-100">

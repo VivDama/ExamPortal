@@ -10,15 +10,19 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { QuestionService } from '../../../services/question.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import Swal from 'sweetalert2';
+import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
+import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 
 @Component({
   selector: 'app-add-question',
   standalone: true,
-  imports: [JsonPipe, MatCardModule, MatFormFieldModule, MatInputModule, MatSelectModule, MatButtonModule, FormsModule, CommonModule],
+  imports: [JsonPipe, MatCardModule, MatFormFieldModule, MatInputModule, MatSelectModule, MatButtonModule, FormsModule, CommonModule,CKEditorModule],
   templateUrl: './add-question.component.html',
   styleUrl: './add-question.component.css'
 })
 export class AddQuestionComponent implements OnInit {
+
+  public editor = ClassicEditor;
 
   qId: any;
   qTitle: any;
